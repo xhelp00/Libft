@@ -10,6 +10,5 @@
 • memchr
 • memcmp
 • strnstr
-• atoi
 • calloc
 • strdup
