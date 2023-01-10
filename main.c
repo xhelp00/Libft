@@ -18,6 +18,8 @@
 #include "ft_isascii.c"
 #include "ft_isprint.c"
 #include "ft_strlen.c"
+#include "ft_tolower.c"
+#include "ft_toupper.c"
 
 int main()
 {
@@ -45,28 +47,43 @@ int main()
 	c = '	';
 	printf("\nCheck ft_isascii on char TAB: %d", ft_isascii(c));
 	c = 'A';
-	printf("\nCheck ft_isascii on char A: %d", ft_isascii(c));
-	c = '四';
-	printf("\nCheck ft_isascii on char 四: %d", ft_isascii(c));
-	c = '二';
-	printf("\nCheck ft_isascii on char 二: %d\n", ft_isascii(c));
+	printf("\nCheck ft_isascii on char A: %d\n", ft_isascii(c));
+	// c = '四';
+	// printf("\nCheck ft_isascii on char 四: %d", ft_isascii(c));
+	// c = '二';
+	// printf("\nCheck ft_isascii on char 二: %d\n", ft_isascii(c));
 
 	//ft_isprint
 	c = '	';
 	printf("\nCheck ft_isprint on char TAB: %d", ft_isprint(c));
 	c = 'A';
-	printf("\nCheck ft_isprint on char A: %d", ft_isprint(c));
-	c = '四';
-	printf("\nCheck ft_isprint on char 四: %d", ft_isprint(c));
-	c = '二';
-	printf("\nCheck ft_isprint on char 二: %d\n", ft_isprint(c));
+	printf("\nCheck ft_isprint on char A: %d\n", ft_isprint(c));
+	// c = '四';
+	// printf("\nCheck ft_isprint on char 四: %d", ft_isprint(c));
+	// c = '二';
+	// printf("\nCheck ft_isprint on char 二: %d\n", ft_isprint(c));
 
 	//ft_strlen
 	char str[50];
 	int len;
 	strcpy(str, "42 Prague");
 	len = ft_strlen(str);
-	printf("\nLength of \"%s\" is %d\n", str, len);
-	
+	printf("\nCheck ft_strlen. Length of \"%s\" is %d\n", str, len);
+
+	//ft_tolower
+	c = 'a';
+	printf("\nCheck ft_tolower on char a: %c", ft_tolower(c));
+	c = 'A';
+	printf("\nCheck ft_tolower on char A: %c", ft_tolower(c));
+	c = '1';
+	printf("\nCheck ft_tolower on char 1: %c\n", ft_tolower(c));
+
+	//ft_toupper
+	c = 'a';
+	printf("\nCheck ft_toupper on char a: %c", ft_toupper(c));
+	c = 'A';
+	printf("\nCheck ft_toupper on char A: %c", ft_toupper(c));
+	c = '1';
+	printf("\nCheck ft_toupper on char 1: %c\n", ft_toupper(c));
 }
 
