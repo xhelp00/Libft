@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "ft_isalpha.c"
 #include "ft_isdigit.c"
 #include "ft_isalnum.c"
@@ -20,6 +21,7 @@
 #include "ft_strlen.c"
 #include "ft_tolower.c"
 #include "ft_toupper.c"
+#include "ft_atoi.c"
 
 int main()
 {
@@ -85,5 +87,18 @@ int main()
 	printf("\nCheck ft_toupper on char A: %c", ft_toupper(c));
 	c = '1';
 	printf("\nCheck ft_toupper on char 1: %c\n", ft_toupper(c));
+
+	//ft_atoi
+	printf("\nCheck ft_atoi:");
+	int val;
+    char strn1[] = "  -12546";
+  
+    val = atoi(strn1);
+    printf("\nString value = %s\n", strn1);
+    printf("Integer value by atoi = %d\n", val);
+
+	val = ft_atoi(strn1);
+	printf("String value = %s\n", strn1);
+    printf("Integer value by ft_atoi = %d\n", val);
 }
 
