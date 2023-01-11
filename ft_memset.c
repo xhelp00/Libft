@@ -9,5 +9,17 @@
 /*   Updated: 2023/01/10 17:02:29 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
+void	*ft_memset(void *p, int c, size_t n)
+{
+	size_t i;
 
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char*)p)[i] = c;
+		i++;
+	}
+	return (p);
+}

@@ -22,6 +22,7 @@
 #include "ft_tolower.c"
 #include "ft_toupper.c"
 #include "ft_atoi.c"
+#include "ft_memset.c"
 
 int main()
 {
@@ -100,5 +101,12 @@ int main()
 	val = ft_atoi(strn1);
 	printf("String value = %s\n", strn1);
     printf("Integer value by ft_atoi = %d\n", val);
+
+	//ft_memset
+	strcpy(str, "shooting stars!");
+	printf("\nCheck ft_memset:");
+	printf("\nOriginal string: %s", str);
+	ft_memset(str,'*',9);
+	printf("\nString after memset: %s", str);
 }
 
