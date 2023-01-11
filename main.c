@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 09:05:21 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/11 16:03:04 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/11 16:26:18 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,6 @@ int main()
 	printf("\nCheck ft_memset:");
 	printf("\nOriginal string: %s", str);
 	ft_memset(str,'*',9);
-	printf("\nString after memset: %s", str);
+	printf("\nString after memset: %s\n", str);
 }
 
