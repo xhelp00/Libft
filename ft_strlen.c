@@ -9,8 +9,9 @@
 /*   Updated: 2023/01/10 15:07:43 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
 	int i;
 
