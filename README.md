@@ -1,4 +1,3 @@
-• memset
 • bzero
 • memcpy
 • memmove
