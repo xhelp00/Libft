@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *s)
 {
 	int i;
 	int base;
@@ -20,18 +20,18 @@ int	ft_atoi(const char *str)
 	base = 0;
 	sign = 1;
 
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13))
 	i++;
-	if (str[i] == '-')
+	if (s[i] == '-')
 	{
 		sign *= -1;
 		i++;
 	}
-	else if (str[i] == '+')
+	else if (s[i] == '+')
 	i++;
-	while(str[i] >= '0' && str[i] <= '9')
+	while(s[i] >= '0' && s[i] <= '9')
 	{
-		base = base *10 + (str[i] - '0');
+		base = base * 10 + (s[i] - '0');
 		i++;
 	}
 	return (base * sign);
