@@ -6,7 +6,7 @@
 • strchr
 • strrchr
 • strncmp
-• memchr
+• memchr - to be tested
 • memcmp
 • strnstr
 • calloc

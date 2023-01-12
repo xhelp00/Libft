@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 09:05:21 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/11 16:26:18 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/12 11:27:18 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 #include "ft_toupper.c"
 #include "ft_atoi.c"
 #include "ft_memset.c"
+#include "ft_memchr.c"
 
 int main()
 {
@@ -107,6 +108,13 @@ int main()
 	printf("\nCheck ft_memset:");
 	printf("\nOriginal string: %s", str);
 	ft_memset(str,'*',9);
+	printf("\nString after memset: %s\n", str);
+
+	//ft_memchr
+	strcpy(str, "shooting stars!");
+	printf("\nCheck ft_memchr:");
+	printf("\nOriginal string: %s", str);
+	strcpy(str, ft_memchr(str,'g',15));
 	printf("\nString after memset: %s\n", str);
 }
 
