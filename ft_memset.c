@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phelebra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:02:26 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/10 17:02:29 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/13 08:49:22 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
+#include <stdlib.h>
 
 void	*ft_memset(void *p, int c, size_t n)
 {
