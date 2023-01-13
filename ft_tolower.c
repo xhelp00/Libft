@@ -6,9 +6,11 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:04:59 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/13 09:41:54 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/13 10:24:56 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

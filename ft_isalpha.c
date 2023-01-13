@@ -6,9 +6,11 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 08:54:55 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/10 09:57:59 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/13 10:24:09 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

@@ -6,14 +6,15 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:59:34 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/10 15:07:43 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:08:58 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
+#include "libft.h"
 
 size_t	ft_strlen(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')

@@ -6,13 +6,15 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 08:57:50 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/10 13:59:33 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:12:19 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);

@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 17:07:06 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/13 13:14:40 by phelebra         ###   ########.fr       */
+/*   Created: 2023/01/10 17:06:34 by phelebra          #+#    #+#             */
+/*   Updated: 2023/01/13 14:01:31 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
-	int	base;
-	int	sign;
+	size_t	i;
 
 	i = 0;
-	base = 0;
-	sign = 1;
-	while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13))
+	if (n <= 0)
+		return (0);
+	while ((((unsigned char *)s1)[i] == ((unsigned char *)s2)[i])
+	&& ((unsigned char *)s1)[i] != 0 && i < n - 1)
 		i++;
-	if (s[i] == '-')
-	{
-		sign *= -1;
-		i++;
-	}
-	else if (s[i] == '+')
-		i++;
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		base = base * 10 + (s[i] - '0');
-		i++;
-	}
-	return (base * sign);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
