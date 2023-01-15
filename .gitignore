@@ -2,4 +2,5 @@ a.out
 .vscode
 main.c
 libft-war-machine
+libftTester
 .DS_Store
