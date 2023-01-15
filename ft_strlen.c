@@ -6,13 +6,13 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:59:34 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/13 13:08:58 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/15 21:44:10 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
