@@ -2,3 +2,4 @@ a.out
 .vscode
 main.c
 libft-war-machine
+.DS_Store
