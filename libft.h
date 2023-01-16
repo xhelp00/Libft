@@ -6,14 +6,15 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:17:52 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/16 09:25:33 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:25:30 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -36,5 +37,6 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstbuffsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstbuffsize);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
