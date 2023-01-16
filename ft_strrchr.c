@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:05:31 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/15 17:05:25 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/16 08:58:59 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = (int) ft_strlen((char *)s);
 	while (i >= 0)
