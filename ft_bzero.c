@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:02:48 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/15 10:52:40 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/16 08:56:46 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	i = 0;
-
 	while (i < n)
 	{
 		((unsigned char *)s)[i] = 0;
