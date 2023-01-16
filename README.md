@@ -1,4 +1,3 @@
-• strlcpy
 • strlcat
 • calloc
 • strdup
