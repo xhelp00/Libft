@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:05:14 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/15 16:18:39 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/16 09:00:28 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c)
-		{
-			if (!*s)
-				return (0);
-			s++;
-		}
+	{
+		if (!*s)
+			return (0);
+		s++;
+	}
 	return ((char *)s);
 }
