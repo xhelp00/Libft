@@ -3,4 +3,6 @@ a.out
 main.c
 libft-war-machine
 libftTester
+libft-unit-test
 .DS_Store
+libft.so 
