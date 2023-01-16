@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:04:28 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/16 11:55:11 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:16:28 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstbuffsize)
 
 	i = 0;
 	j = 0;
+	if (!dst && dstbuffsize == 0)
+		return (0);
 	while (dst[i] && i < dstbuffsize)
 		i++;
 	j = ft_strlen(src);
