@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:06:51 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/16 17:21:20 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/17 14:08:19 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	size_t	i;
 	size_t	j;
+
 	if (!haystack && n == 0)
 		return (0);
 	if (needle[0] == '\0')

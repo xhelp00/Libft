@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:39:16 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/16 17:04:55 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/17 14:03:52 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	j = 0;
 	while (j < len2)
-	{
-		join[i] = s2[j];
-		i++;
-		j++;
-	}
+		join[i++] = s2[j++];
 	join[i] = '\0';
 	return (join);
 }
