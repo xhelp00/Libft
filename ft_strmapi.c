@@ -6,8 +6,28 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:49:18 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/13 10:51:22 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/19 11:14:12 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+{
+	char	*ptr;
+	size_t	len;
+	size_t	i;
+
+	i = 0;
+	len = ft_strlen(s);
+	ptr = malloc(sizeof(char) * len + 1);
+	if (!ptr)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		ptr[i] = f((unsigned int)i, s[i]);
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
+}
