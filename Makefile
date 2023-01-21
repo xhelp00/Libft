@@ -6,7 +6,7 @@
 #    By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/13 09:54:20 by phelebra          #+#    #+#              #
-#    Updated: 2023/01/21 18:41:53 by phelebra         ###   ########.fr        #
+#    Updated: 2023/01/21 22:50:56 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,10 +25,8 @@ SRCS	:= 	ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 				ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c ft_itoa.c \
 				ft_split.c
 
-BONUS_S	:=	ft_lstnew.c \
-			#ft_lstadd_front.c ft_lstsize.c 		\
-			ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c 	\
-			ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BONUS_S	:=	ft_lstnew.c ft_lstsize.c ft_lstlast.c ft_lstmap.c ft_lstiter.c \
+			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstadd_front.c \
 
 OBJS	:=	$(SRCS:.c=.o)
 BONUS_O :=	$(BONUS_S:.c=.o)
