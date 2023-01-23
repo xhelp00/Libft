@@ -1,0 +1,3 @@
+• strlcat
+• calloc
+• strdup
