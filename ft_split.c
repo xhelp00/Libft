@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:39:39 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/23 08:10:00 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/23 08:33:39 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,39 +31,14 @@ static int	ft_wordcount(char const *s, char c)
 	return (wordcount);
 }
 
-/* static void	ft_fill(char **space, char const *s, char c)
-{
-	char		**space1;
-	char const	*tmp;
-
-	tmp = s;
-	space1 = space;
-	while (*tmp)
-	{
-		while (*s == c)
-			++s;
-		tmp = s;
-		while (*tmp && *tmp != c)
-			++tmp;
-		if (*tmp == c || tmp > s)
-		{
-			*space1 = ft_substr(s, 0, tmp - s);
-			s = tmp;
-			++space1;
-		}
-	}
-	*space1 = NULL;
-} */
-
-static int	ft_size_word(char const *s, char c, int i)
+static int	ft_size_word(char const *s, char c)
 {
 	int	size;
 
 	size = 0;
-	while (s[i] != c && s[i])
+	while (s[size] != c && s[size])
 	{
 		size++;
-		i++;
 	}
 	return (size);
 }
@@ -75,33 +50,41 @@ static void	ft_free(char **strs, int j)
 	free(strs);
 }
 
-
-char	**ft_split(char const *s, char c)
+static char	**ft_fill(char **new, const char *str, char c, int count)
 {
-	int		i;
-	int		word;
-	char	**strs;
-	int		size;
-	int		j;
+	int	words;
+	int	len;
+	int	i;
 
 	i = 0;
-	j = -1;
-	word = ft_wordcount(s, c);
-	if (!(strs = (char **)malloc((word + 1) * sizeof(char *))))
-		return (NULL);
-	while (++j < word)
+	words = 0;
+	while (words < count)
 	{
-		while (s[i] == c)
+		while (str[i] == c)
 			i++;
-		size = ft_size_word(s, c, i);
-		if (!(strs[j] = ft_substr(s, i, size)))
-		{
-			ft_free(strs, j);
-			return (NULL);
-		}
-		i += size;
+		len = ft_size_word(&str[i], c);
+		new[words] = ft_substr(str, i, len);
+		if (!new[words])
+			ft_free(new, words);
+		return (NULL);
+		while (str[i] && str[i] != c)
+			i++;
+		words++;
 	}
-	strs[j] = 0;
-	return (strs);
+	new[words] = NULL;
+	return (new);
+}
 
+char	**ft_split(const char *str, char c)
+{
+	int		count;
+	char	**new;
+
+	if (!str)
+		return (NULL);
+	count = ft_wordcount(str, c);
+	new = malloc ((count + 1) * sizeof(char **));
+	if (!new)
+		return (NULL);
+	return (ft_fill(new, str, c, count));
 }
