@@ -6,7 +6,7 @@
 #    By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/13 09:54:20 by phelebra          #+#    #+#              #
-#    Updated: 2023/01/21 22:50:56 by phelebra         ###   ########.fr        #
+#    Updated: 2023/01/23 10:22:16 by phelebra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,9 +38,6 @@ $(NAME):	$(OBJS) $(BONUS_O)
 
 bonus:		$(NAME) $(BONUS_O)
 			ar -rcs $(NAME) $(BONUS_O)
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) -c $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
 	
 .c.o:
 			$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
