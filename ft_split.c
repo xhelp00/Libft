@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:39:39 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/20 17:42:44 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/23 08:10:00 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_wordcount(char const *s, char c)
 	return (wordcount);
 }
 
-static void	ft_fill(char **space, char const *s, char c)
+/* static void	ft_fill(char **space, char const *s, char c)
 {
 	char		**space1;
 	char const	*tmp;
@@ -53,19 +53,55 @@ static void	ft_fill(char **space, char const *s, char c)
 		}
 	}
 	*space1 = NULL;
+} */
+
+static int	ft_size_word(char const *s, char c, int i)
+{
+	int	size;
+
+	size = 0;
+	while (s[i] != c && s[i])
+	{
+		size++;
+		i++;
+	}
+	return (size);
 }
+
+static void	ft_free(char **strs, int j)
+{
+	while (j-- > 0)
+		free(strs[j]);
+	free(strs);
+}
+
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	int		len;
+	int		i;
+	int		word;
+	char	**strs;
+	int		size;
+	int		j;
 
-	if (!s)
+	i = 0;
+	j = -1;
+	word = ft_wordcount(s, c);
+	if (!(strs = (char **)malloc((word + 1) * sizeof(char *))))
 		return (NULL);
-	len = ft_wordcount(s, c);
-	ptr = (char **)malloc(sizeof(char *) * (len + 1));
-	if (!ptr)
-		return (NULL);
-	ft_fill(ptr, s, c);
-	return (ptr);
+	while (++j < word)
+	{
+		while (s[i] == c)
+			i++;
+		size = ft_size_word(s, c, i);
+		if (!(strs[j] = ft_substr(s, i, size)))
+		{
+			ft_free(strs, j);
+			return (NULL);
+		}
+		i += size;
+	}
+	strs[j] = 0;
+	return (strs);
+
 }
