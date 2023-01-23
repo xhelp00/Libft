@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:39:39 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/23 08:33:39 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/23 08:37:48 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,10 @@ static char	**ft_fill(char **new, const char *str, char c, int count)
 		len = ft_size_word(&str[i], c);
 		new[words] = ft_substr(str, i, len);
 		if (!new[words])
+		{
 			ft_free(new, words);
-		return (NULL);
+			return (NULL);
+		}
 		while (str[i] && str[i] != c)
 			i++;
 		words++;
