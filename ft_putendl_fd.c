@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:05 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/18 21:48:47 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/23 09:36:22 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s || !fd)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{

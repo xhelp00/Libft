@@ -6,7 +6,7 @@
 /*   By: phelebra <xhelp00@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:39:16 by phelebra          #+#    #+#             */
-/*   Updated: 2023/01/17 14:03:52 by phelebra         ###   ########.fr       */
+/*   Updated: 2023/01/23 09:11:18 by phelebra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
 	if (!s1 || !s2)
 		return (NULL);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
 	join = malloc (sizeof(char) * (len1 + len2) + 1);
 	if (!join)
 		return (NULL);
